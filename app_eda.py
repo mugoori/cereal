@@ -8,6 +8,7 @@ def run_eda_app() :
     st.sidebar.image('https://t1.daumcdn.net/cfile/tistory/237A284258A43F2F34')
     df = pd.read_csv('cereal/cereal.csv')
     # --------------------------- 사이드바 이미지 / 데이터 프레임 불러오기
+
     st.subheader('사용된 데이터 프레임 및 기초 통계')
     show_df = st.checkbox('사용된 데이터 프레임')
     if show_df :
@@ -16,6 +17,7 @@ def run_eda_app() :
     if show_df2 :
         st.dataframe(df.describe())
     # ----------------------------  데이터 프레임 / 기초 통계 보여주기
+
     column_list = df.columns[1:-1]
     column_list2 = df.columns[:]
     st.subheader('컬럼 별 히스토그램')
@@ -30,6 +32,7 @@ def run_eda_app() :
     plt.ylabel('Count')
     st.pyplot(fig1)
     #--------------------------- 컬럼 별 히스토그램
+
     st.subheader('상관 관계 분석')
 
     selected_list = st.multiselect('평점 증감 유무를 알고싶은 컬럼을 선택하세요',column_list2,default='rating')
@@ -41,7 +44,6 @@ def run_eda_app() :
         fig2 = plt.figure()
         sb.heatmap(data=df_corr,annot=True, fmt='.2f',cmap='coolwarm',vmin=-1,vmax=1,linewidths=0.5,)
         st.pyplot(fig2)
-
     #------------------------  상관관계
 
     st.subheader('컬럼 별 의미')
@@ -55,5 +57,4 @@ def run_eda_app() :
     st.text('R = Ralston Purina')
     st.text('type : c (cold) / h (hot)')
     st.text('cup : 1회 제공량')
-
     # -------------------  컬럼 별 의미

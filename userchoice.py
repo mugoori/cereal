@@ -9,7 +9,7 @@ def userchoice () :
     column_list = df.columns[3:]
     # ------------------ 조건 컬럼 만들기
 
-    st.subheader('원하는 조건의 시리얼 찾기')
+    st.subheader('맞춤 시리얼 찾기!')
     choice = st.selectbox('컬럼을 선택하세요',column_list)
     # ------------------ 조건 컬럼 선택하기
 
