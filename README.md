@@ -17,10 +17,10 @@
 
 # 앱 사용법과 스크린샷
 
-![화면 캡처 2022-12-21 175754](https://user-images.githubusercontent.com/120348468/208863316-ebf5d52d-8988-4cbd-aa46-91f63464dacc.png)
+![정가을1](https://user-images.githubusercontent.com/120348468/209249005-b024c4e0-5afb-4d3a-abe1-dde8201ca75f.png)
 ![화면 캡처 2022-12-21 175813](https://user-images.githubusercontent.com/120348468/208863334-d6262e36-b002-4e1c-9e4a-5399e8d63b15.png)
 ![화면 캡처 2022-12-21 175821](https://user-images.githubusercontent.com/120348468/208863338-7abb0411-27d0-44e4-8196-6c627ba9b7c9.png)
-![화면 캡처 2022-12-21 175845](https://user-images.githubusercontent.com/120348468/208863350-43d7f409-2d75-4e4e-988c-c12c80f077fb.png)
+![정가을2](https://user-images.githubusercontent.com/120348468/209249007-adc7be19-4ebd-4fca-8e10-16d8022f9e92.png)
 ![화면 캡처 2022-12-21 175905](https://user-images.githubusercontent.com/120348468/208863367-c4a0db62-7ff7-4acc-8a69-2fd1ed147c81.png)
 
 ### userchoice 탭으로가서 원하는 컬럼을 선택하면 오름차순 / 내림차순으로 정렬한다
