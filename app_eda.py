@@ -3,11 +3,33 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sb
+import platform
+from matplotlib import font_manager, rc
+font_path = "C:/Windows/Fonts/NGULIM.TTF"
+font = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font)
 
 def run_eda_app() :
     st.sidebar.image('https://t1.daumcdn.net/cfile/tistory/237A284258A43F2F34')
     df = pd.read_csv('cereal/cereal.csv')
     # --------------------------- 사이드바 이미지 / 데이터 프레임 불러오기
+
+    df.rename(columns={'mfr':'제조사'},inplace=True)
+    df.rename(columns={'type':'차갑게/뜨겁게'},inplace=True)
+    df.rename(columns={'calories':'칼로리'},inplace=True)
+    df.rename(columns={'protein':'단백질'},inplace=True)
+    df.rename(columns={'fat':'지방'},inplace=True)
+    df.rename(columns={'sodium':'나트륨'},inplace=True)
+    df.rename(columns={'fiber':'식이섬유'},inplace=True)
+    df.rename(columns={'carbo':'복합 탄수화물'},inplace=True)
+    df.rename(columns={'sugars':'설탕'},inplace=True)
+    df.rename(columns={'potass':'칼륨'},inplace=True)
+    df.rename(columns={'vitamins':'비타민'},inplace=True)
+    df.rename(columns={'shelf':'선반'},inplace=True)
+    df.rename(columns={'weight':'1인분 무게(온스)'},inplace=True)
+    df.rename(columns={'cups':'1회 제공량 (컵수)'},inplace=True)
+    df.rename(columns={'rating':'점수'},inplace=True)
+    # --------------------------- 컬럼 이름 수정
 
     st.subheader('사용된 데이터 프레임 및 기초 통계')
     show_df = st.checkbox('사용된 데이터 프레임')
@@ -35,7 +57,7 @@ def run_eda_app() :
 
     st.subheader('상관 관계 분석')
 
-    selected_list = st.multiselect('평점 증감 유무를 알고싶은 컬럼을 선택하세요',column_list2,default='rating')
+    selected_list = st.multiselect('평점 증감 유무를 알고싶은 컬럼을 선택하세요',column_list2,default='점수')
 
     if len(selected_list) >= 2 :
 
@@ -45,16 +67,3 @@ def run_eda_app() :
         sb.heatmap(data=df_corr,annot=True, fmt='.2f',cmap='coolwarm',vmin=-1,vmax=1,linewidths=0.5,)
         st.pyplot(fig2)
     #------------------------  상관관계
-
-    st.subheader('컬럼 별 의미')
-    st.text('mfr: 시리얼 제조사')
-    st.text('A = American Home Food Products')
-    st.text('G = General Mills')
-    st.text('K = Kelloggs')
-    st.text('N = Nabisco')
-    st.text('P = Post')
-    st.text('Q = Quaker Oats')
-    st.text('R = Ralston Purina')
-    st.text('type : c (cold) / h (hot)')
-    st.text('cup : 1회 제공량')
-    # -------------------  컬럼 별 의미

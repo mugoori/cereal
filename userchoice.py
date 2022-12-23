@@ -5,6 +5,21 @@ import numpy as np
 def userchoice () :
     df = pd.read_csv('cereal/cereal.csv')
     # ------------------ 데이터 프레임 불러오기
+    df.rename(columns={'mfr':'제조사'},inplace=True)
+    df.rename(columns={'type':'차갑게/뜨겁게'},inplace=True)
+    df.rename(columns={'calories':'칼로리'},inplace=True)
+    df.rename(columns={'protein':'단백질'},inplace=True)
+    df.rename(columns={'fat':'지방'},inplace=True)
+    df.rename(columns={'sodium':'나트륨'},inplace=True)
+    df.rename(columns={'fiber':'식이섬유'},inplace=True)
+    df.rename(columns={'carbo':'복합 탄수화물'},inplace=True)
+    df.rename(columns={'sugars':'설탕'},inplace=True)
+    df.rename(columns={'potass':'칼륨'},inplace=True)
+    df.rename(columns={'vitamins':'비타민'},inplace=True)
+    df.rename(columns={'shelf':'선반'},inplace=True)
+    df.rename(columns={'weight':'1인분 무게(온스)'},inplace=True)
+    df.rename(columns={'cups':'1회 제공량 (컵수)'},inplace=True)
+    df.rename(columns={'rating':'점수'},inplace=True)
 
     column_list = df.columns[3:]
     # ------------------ 조건 컬럼 만들기
@@ -32,17 +47,3 @@ def userchoice () :
         st.sidebar.image('https://i5.walmartimages.com/asr/02280b42-79b7-4d59-bae9-3d9a06ef082f_1.b880653e52f69b76a813cb8075a112fb.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')
         st.sidebar.image('https://www.kroger.com/product/images/large/back/0003000006410')
     # ----------------- 사이드 평점 칼로리 TOP 3 사진 보여주기
-    
-    st.subheader('컬럼 별 의미')
-    st.text('mfr: 시리얼 제조사')
-    st.text('A = American Home Food Products')
-    st.text('G = General Mills')
-    st.text('K = Kelloggs')
-    st.text('N = Nabisco')
-    st.text('P = Post')
-    st.text('Q = Quaker Oats')
-    st.text('R = Ralston Purina')
-    st.text('type : c (cold) / h (hot)')
-    st.text('cup : 1회 제공량')
-    # ------------------ 컬럼 별 의미
-
