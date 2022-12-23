@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=원하는%20시리얼%20찾기%20&fontSize=90" />
+# 원하는 시리얼을 찾아보자 ! :clap:
 
 ⚒️ Tools
 
@@ -13,7 +13,7 @@
 ### 이 앱은 사용자가 원하는 정렬 조건으로 정렬해 시리얼을 찾아주는 앱입니다.
 ### 해당 프로젝트는 jupyter notebook으로 자료를 분석하고
 ### visual studio code 를 사용하여 작업 했으며
-### SSH를 통해서 데이터를 업데이트하는것이 아닌 Actions를 통해 바로 ec2에 업데이트하게 설정하였다
+### SSH를 통해서 데이터를 업데이트하는것이 아닌 Actions를 통해 바로 ec2에 업데이트하게 설정하였습니다
 
 # 앱 사용법과 스크린샷
 
@@ -24,7 +24,7 @@
 ![화면 캡처 2022-12-21 175905](https://user-images.githubusercontent.com/120348468/208863367-c4a0db62-7ff7-4acc-8a69-2fd1ed147c81.png)
 
 ### userchoice 탭으로가서 원하는 컬럼을 선택하면 오름차순 / 내림차순으로 정렬한다
-### 사이드바에는 평점이 높은 시리얼과 칼로리가 낮은 시리얼 3개의 이미지를 배치하였다
+### 사이드바에는 평점이 높은 시리얼과 칼로리가 낮은 시리얼 3개의 이미지를 배치했습니다
 
 # 데이터 출처
 
